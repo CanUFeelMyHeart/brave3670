@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git base guide</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="git-guide-for-kettles">Git guide for kettles</h1>
+<h2 id="getting-started">Getting started</h2>
+<ul>
+<li>
+<h2 id="installing-git">Installing Git</h2>
+<blockquote>
+<p>I’ll assume you’ve installed Git already. Let’s not waste time and move to the next step.<br>
+P.S. If you’re reading this, you’ve succesfully wasted your time. Bravo!</p>
+</blockquote>
+</li>
+<li>
+<h2 id="creating-a-repository">Creating a repository</h2>
+<blockquote>
+<p>To create your first repository, open GitBash first. If you use Windows, it should be in Git folder in your program list (just open Windows menu). GitBash is a base and main util to interact with Git. However, it’s not required or even recommended to use a program whose interface ressembles old Linux OC. But, after all, it is working, so continule with it, if that’s your choice.</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>Anyway, let’s complete at least this step. First of all, you’d want for Git to recognise you, which means it needs to know your name and, preferably, email. Use this:<br>
+<code>git config --global user.name "My Name"</code><br>
+<code>git config --global user.email myEmail@example.com</code><br>
+And don’t forget to replace those examples with your actual email and a decent name - and if you’ll ever need to change it, just repeat one of these commands. Next step on our hard way… is already initialisation.<br>
+First thing to do is find a project folder:<br>
+<code>cd C:/Users/user/Your_project</code><br>
+Than just initialise it so Git knows it’s a repository:<br>
+<code>git init</code><br>
+That’s it! Correct, it is indeed a repository and now you can store files in it as in a regular folder… do you? Well, Git doesn’t think so.</p>
+</blockquote>
+</li>
+<li>
+<h2 id="adding-in-some-files">Adding in some files</h2>
+<blockquote>
+<p>Well, while the files go in and out easily, Git doesn’t consider tham as something useable, and we should fix that. First, let’s see if Git found something for you. It’s simple:<br>
+<code>git status</code><br>
+After that Git should tell you if it has tracked any files or just noticed something unidentified. In the last case, Git will need your permission on tracking them:<br>
+<code>git add example_text.txt</code><br>
+It isn’t over yet. Git sees this file now, but doesn’t know what to do. This file, surely, exists, but to allow Git to freely manipulate it, we must commit… nothing, just commit:<br>
+<code>git commit -m 'The comment I left'</code><br>
+Yeah, you leave a comment. Usually it’s whether of what the file is or what did you change in it. This procedure is required each time someone changes the file to. Now, available to commit files, it’s time to finally do something with your project.</p>
+</blockquote>
+</li>
+<li>
+<h2 id="pushing-and-pulling">Pushing and pulling</h2>
+<blockquote>
+<p>What you need from now is to be able to save our project in a distant server and load it whenever you want, and that’s the easy part compared to what comes next. There are quite a lot of keywords, but for most of the time you’ll only need three, and those are either:<br>
+<code>git remote add repos_name &lt;url&gt;</code>, it will add a distantly accesible repository by following url to your list of “remotes” or<br>
+<code>git push repos_name branch_name</code>, this one pushes the required branch (“master” by default) to the repository or<br>
+<code>git pull</code>, a fusion of <code>git fetch</code> and <code>git merge</code> commands in global size - it automatically fetches every single new or changed files from the version in repository and merges them with current version. Simply, it updates or recovers the project to the latest pushed version. And now, the most interesting part.</p>
+</blockquote>
+</li>
+<li>
+<h2 id="branches">Branches</h2>
+<blockquote>
+<p>This is quite a hard, but, indisputably, important feature that not only helps to keep multiple versions without saving them to the distant repository, but allows multiple people to work on the same project each implementing his own things. Branches, basically, are copies of the same project which can be changed separately and merged. And works this incredible tool like this:<br>
+<code>git branch name</code> to create a branch with sertain name<br>
+<code>git checkout name</code> to switch to this new branch or any other<br>
+<code>git merge name</code> to try to merge current branch with the one with the name<br>
+If the merge conflicts, Git will inform you and tell, where exactly the problems are. You’ll have to fix it manually. That’s it! Truly, those are the exact things you’ll need to operate this system. This isn’t everything, indeed, but a base is set and the work can begin!</p>
+</blockquote>
+</li>
+<li>
+<h2 id="gitignore">Gitignore</h2>
+<blockquote>
+<p>No, I didn’t lie, this was all. It’s just a quick tip to ease your work a bit. If you don’t want certain files, file types or folders to even be noticed by Git, you’ll need to follow several steps:</p>
+<ul>
+<li>Create .gitignore text file in your root folder</li>
+<li>Fill it with any names of files you don’t want to see Git showing you. You can use / before the name to mark it as a folder or * to mark it as file extension.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h3 id="end">End</h3>
+<p>And with that last tip this short guide ends, being the first and only part of “Git guide for kettles”. I hope you liked it and found it helpful. Have a nice day! With pleasure,</p>
+<h4 id="michael-rasputin">Michael Rasputin</h4>
+</div>
+</body>
+
+</html>
